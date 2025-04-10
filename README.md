@@ -2,6 +2,7 @@
 
 Mini-projet réalisé par [**Ahmad Chakcha**](https://github.com/AhmadChakcha) et [**Mohamed Ali Djemal**](https://github.com/chameauu)  dans le cadre du cours sur les Technologies Sémantiques. L'objectif est de modéliser les concepts et relations du **Transport Maritime** en utilisant les standards du web sémantique (RDF, RDFS, SPARQL, OWL,SWRL).
 
+
 ## 🌊 Présentation  :
 
 Le transport maritime est un secteur vital qui relie les continents en transportant les  marchandises  par voie marine.  Représentant **90%** du commerce mondial, il joue un rôle essentiel dans l'économie globale.  
