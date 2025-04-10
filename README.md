@@ -150,3 +150,29 @@ Les propriétés d’objet représentant les relations entre les différentes cl
 Voici une représentation visuelle de l'ontologie du transport maritime :  
 
 ![Visualisation de l'ontologie](./Visualisation.png)
+
+
+## 🌊 Interrogation avec SPARQL :  
+Voici quelques requêtes SPARQL utilisées pour interroger une base de données RDF sur le transport maritime.  
+
+#### 🔍 Requête 1 : Informations sur les capitaines :  
+
+
+    PREFIX : <http://www.semanticweb.org/transportmaritime#>
+    SELECT  ?id  ?prenom ?nom  ?nationalite ?salaire
+    WHERE {
+    ?capitaine :NomCapitaine ?nom ;
+             :Salaire ?salaire ;
+             :IdCapitaine ?id ;
+             :PrénomCapitaine ?prenom;
+             :Nationalité ?nationalite .
+          } 
+  => Retourne l'identifiant, le prénom, le nom, la nationalité et le salaire de chaque capitaine.  
+  
+#### 🔍 Requête 2 : Types de cargaisons :  
+    PREFIX : <http://www.semanticweb.org/transportmaritime#>
+    SELECT DISTINCT ?type
+    WHERE {
+    ?cargaison :TypeCargaison ?type .
+    }    
+  => Retourne les types de cargaisons distincts présents dans la base.
