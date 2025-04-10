@@ -168,11 +168,39 @@ Voici quelques requêtes SPARQL utilisées pour interroger une base de données 
              :Nationalité ?nationalite .
           } 
   => Retourne l'identifiant, le prénom, le nom, la nationalité et le salaire de chaque capitaine.  
-  
+
 #### 🔍 Requête 2 : Types de cargaisons :  
     PREFIX : <http://www.semanticweb.org/transportmaritime#>
     SELECT DISTINCT ?type
     WHERE {
     ?cargaison :TypeCargaison ?type .
     }    
-  => Retourne les types de cargaisons distincts présents dans la base.
+  => Retourne les types de cargaisons distincts présents dans la base.  
+
+#### 🔍 Requête 3 : Capitaine avec le plus grand salaire :  
+
+    PREFIX : <http://www.semanticweb.org/transportmaritime#>
+    SELECT ?id ?nom ?prenom ?salaire
+    WHERE {
+    ?capitaine :IdCapitaine ?id ;
+             :NomCapitaine ?nom ;
+             :PrénomCapitaine ?prenom ;
+             :Salaire ?salaire .
+    }
+    ORDER BY DESC(?salaire)
+    LIMIT 1  
+
+  =>Retourne le capitaine ayant le salaire le plus élevé. 
+
+  #### 🔍 Requête 4 : Ports liés à la trajectoire Tarjet_01 :
+
+    PREFIX : <http://www.semanticweb.org/transportmaritime#>
+    SELECT ?nomPort ?idPort ?capacite
+    WHERE {
+    :Tarjet_01 (:depuisport | :versport) ?port .
+    ?port :NomPort ?nomPort ;
+        :IdPort ?idPort ;
+        :CapacitéPort ?capacite .
+    }  
+    
+  => Retourne les ports de départ ou d'arrivée associés à la trajectoire Tarjet_01.
