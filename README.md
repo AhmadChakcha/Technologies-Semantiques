@@ -21,9 +21,132 @@ Ce projet se concentre sur ce domaine afin d'explorer comment le web sémantique
 
 + *Ports*:  
     Les infrastructures où les navires arrivent pour embarquer ou débarquer des marchandises.  
-    
+
 + *Trajets*:  
     Parcours effectué par un navire entre deux ports.  
 
 + *Capitaine* :  
-    La personne responsable de la gestion et de la navigation d'un navire.  
+    La personne responsable de la gestion et de la navigation d'un navire. 
+
+## 🌊 Modélisation en RDF / RDFS :  
+
+Voici un aperçu des parties principales de ce Mini-Projet  pour mieux s’y retrouver.
+
+- **Classes**
+- **Propriétés de données**
+- **Propriétés d’objet**
+
+### 🧩 Classes :
+Les classes  utilisés dans l’ontologie sont :
+
+ 🏷️ ConditionsMétéorologiques
+
+🏷️ Moteur
+
+🏷️ Capitaine
+
+🏷️ Cargaison
+
+🏷️ CompagnieMaritime
+
+🏷️ Navire
+
+🏷️ Port
+
+🏷️Trajet
+
+
+### 🧩 Propriétés de données : 
+
+Les propriétés de données sont listées ci-dessous pour chaque classe :
+
+- _ConditionsMétéorologiques_ :
+  - Température
+  - Visibilité
+  - VitesseVent
+
+- _Moteur_ :
+  - IdMoteur
+  - TypeMoteur
+  - Puissance
+  - Consommation
+
+- _Capitaine_ :
+  - IdCapitaine
+  - NomCapitaine
+  - PrénomCapitaine
+  - Salaire
+  - Âge
+  - DateDébutTravail
+  - Nationalité
+
+- _Cargaison_ :
+  - IdCargaison
+  - Poids
+  - Prix
+  - TypeCargaison
+
+- _CompagnieMaritime_ :
+  - IdCompanie
+  - NomCompanie
+  - NombreNavire
+  - ChiffresAffaires
+  - AnnéeCréation
+
+- _Navire_ :
+  - IdNavire
+  - AnnéeConstruction
+  - Capacité
+  - Longueur
+  - Largeur
+  - TypeNavire 
+
+- _Port_ :
+  - IdPort
+  - NomPort
+  - CapacitéPort
+  - Location
+
+- _Trajet_ :
+  - IdTrajet
+  - Distance
+  - Durée
+  - DateArrivée
+  - DateDépart
+
+
+### 🧩 Propriétés d’objet :  
+Les propriétés d’objet représentant les relations entre les différentes classes de l’ontologie :  
+
+- *appartientÀ* : 
+  -  Indique qu’un **Navire** appartient à une **CompagnieMaritime**.  
+
+- *commandéPar* :
+  - Montre quel **Capitaine** est responsable d’un **Navire**.
+
+- *employéPar* : 
+  -  Spécifie la **CompagnieMaritime** qui emploie un **Capitaine**.
+
+- *transportéPar* :
+  - Fait le lien entre une **Cargaison** et le **Navire**.
+
+- *depuisPort* :
+  - Désigne le **Port** de départ d’un **Trajet**.
+
+- *versPort* :
+  - Représente le **Port** d’arrivée d’un **Trajet** . 
+
+- *utiliséPar* :
+  -  Le **Moteur** utilisé par un **Navire**.
+
+- *effectuéPar* : 
+  - Indique qu’un **Trajet** est effectué par un **Navire**.
+
+- *affectéPar* :
+  - Indique qu’un  **Trajet** est influencé par les **ConditionsMétéorologiques** . 
+
+### 🗺️ Visualisation de l'ontologie :  
+
+Voici une représentation visuelle de l'ontologie du transport maritime :  
+
+![Visualisation de l'ontologie](./Visualisation.png)
