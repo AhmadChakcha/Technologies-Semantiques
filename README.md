@@ -1,6 +1,12 @@
 # 🚢 __Ontologie du Transport Maritime__ 
 
-Mini-projet réalisé par [**Ahmad Chakcha**](https://github.com/AhmadChakcha) et [**Mohamed Ali Djemal**](https://github.com/chameauu)  dans le cadre du cours sur les Technologies Sémantiques. L'objectif est de modéliser les concepts et relations du **Transport Maritime** en utilisant les standards du web sémantique (RDF, RDFS, SPARQL, OWL,SWRL).
+Mini-projet réalisé par [**Ahmad Chakcha**](https://github.com/AhmadChakcha) et [**Mohamed Ali Djemal**](https://github.com/chameauu)  dans le cadre du cours sur les Technologies Sémantiques. L'objectif est de modéliser les concepts et relations du **Transport Maritime** en utilisant les standards du web sémantique (RDF, RDFS, SPARQL, OWL,SWRL).   
+
+##  📑  Table des matières
+
+- [ Présentation](#🌊-présentation-)
+- [ Modélisation en RDF / RDFS](#🌊-modélisation-en-rdf--rdfs-)
+- [ Interrogation avec SPARQL](#🌊-interrogation-avec-sparql)
 
 
 ## 🌊 Présentation  :
