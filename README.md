@@ -4,9 +4,9 @@ Mini-projet réalisé par [**Ahmad Chakcha**](https://github.com/AhmadChakcha) e
 
 ##  📑  Table des matières
 
-- [Présentation](#présentation-)
-- [ Modélisation en RDF / RDFS](#🌊-modélisation-en-rdf--rdfs-)
-- [ Interrogation avec SPARQL](#🌊-interrogation-avec-sparql)
+- [Présentation](#-présentation--)
+- [ Modélisation en RDF / RDFS](#-modélisation-en-rdf--rdfs-)
+- [ Interrogation avec SPARQL](#-interrogation-avec-sparql-)
 
 
 ## 🌊 Présentation  :
