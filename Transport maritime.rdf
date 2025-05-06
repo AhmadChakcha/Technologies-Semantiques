@@ -1,35 +1,915 @@
+<?xml version="1.0"?>
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/transportmaritime"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/transportmaritime">
+    
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="tm" IRI="http://www.semanticweb.org/transportmaritime#"/>
+    
+    <!-- Classes -->
+    
+    <Declaration>
+        <Class IRI="#ConditionsMétéorologiques"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Moteur"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Capitaine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cargaison"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CompagnieMaritime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Navire"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Port"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Trajet"/>
+    </Declaration>
+    
+    <!-- Object Properties (Propriétés d'objet) -->
+    
+    <Declaration>
+        <ObjectProperty IRI="#appartientÀ"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#commandéPar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#employéPar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#transportéPar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#depuisPort"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#versPort"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#utiliséPar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#effectuéPar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#affectéPar"/>
+    </Declaration>
+    
+    <!-- Data Properties (Propriétés de données) -->
+    
+    <!-- ConditionsMétéorologiques Properties -->
+    <Declaration>
+        <DataProperty IRI="#Température"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Visibilité"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#VitesseVent"/>
+    </Declaration>
+    
+    <!-- Moteur Properties -->
+    <Declaration>
+        <DataProperty IRI="#IdMoteur"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#TypeMoteur"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Puissance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Consommation"/>
+    </Declaration>
+    
+    <!-- Capitaine Properties -->
+    <Declaration>
+        <DataProperty IRI="#IdCapitaine"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NomCapitaine"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PrénomCapitaine"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Salaire"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Âge"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DateDébutTravail"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Nationalité"/>
+    </Declaration>
+    
+    <!-- Cargaison Properties -->
+    <Declaration>
+        <DataProperty IRI="#IdCargaison"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Poids"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Prix"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#TypeCargaison"/>
+    </Declaration>
+    
+    <!-- CompagnieMaritime Properties -->
+    <Declaration>
+        <DataProperty IRI="#IdCompanie"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NomCompanie"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NombreNavire"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ChiffresAffaires"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#AnnéeCréation"/>
+    </Declaration>
+    
+    <!-- Navire Properties -->
+    <Declaration>
+        <DataProperty IRI="#IdNavire"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#AnnéeConstruction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Capacité"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Longueur"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Largeur"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#TypeNavire"/>
+    </Declaration>
+    
+    <!-- Port Properties -->
+    <Declaration>
+        <DataProperty IRI="#IdPort"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NomPort"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CapacitéPort"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Location"/>
+    </Declaration>
+    
+    <!-- Trajet Properties -->
+    <Declaration>
+        <DataProperty IRI="#IdTrajet"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Distance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Durée"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DateArrivée"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DateDépart"/>
+    </Declaration>
+    
+    <!-- Object Property Domains and Ranges -->
+    
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#appartientÀ"/>
+        <Class IRI="#Navire"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#appartientÀ"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </ObjectPropertyRange>
+    
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#commandéPar"/>
+        <Class IRI="#Navire"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#commandéPar"/>
+        <Class IRI="#Capitaine"/>
+    </ObjectPropertyRange>
+    
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#employéPar"/>
+        <Class IRI="#Capitaine"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#employéPar"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </ObjectPropertyRange>
+    
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#transportéPar"/>
+        <Class IRI="#Cargaison"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#transportéPar"/>
+        <Class IRI="#Navire"/>
+    </ObjectPropertyRange>
+    
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#depuisPort"/>
+        <Class IRI="#Trajet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#depuisPort"/>
+        <Class IRI="#Port"/>
+    </ObjectPropertyRange>
+    
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#versPort"/>
+        <Class IRI="#Trajet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#versPort"/>
+        <Class IRI="#Port"/>
+    </ObjectPropertyRange>
+    
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#utiliséPar"/>
+        <Class IRI="#Moteur"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#utiliséPar"/>
+        <Class IRI="#Navire"/>
+    </ObjectPropertyRange>
+    
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#effectuéPar"/>
+        <Class IRI="#Trajet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#effectuéPar"/>
+        <Class IRI="#Navire"/>
+    </ObjectPropertyRange>
+    
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#affectéPar"/>
+        <Class IRI="#Trajet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#affectéPar"/>
+        <Class IRI="#ConditionsMétéorologiques"/>
+    </ObjectPropertyRange>
+    
+    <!-- Data Property Domains and Types -->
+    
+    <!-- ConditionsMétéorologiques Data Properties -->
+    <DataPropertyDomain>
+        <DataProperty IRI="#Température"/>
+        <Class IRI="#ConditionsMétéorologiques"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Température"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#Visibilité"/>
+        <Class IRI="#ConditionsMétéorologiques"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Visibilité"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#VitesseVent"/>
+        <Class IRI="#ConditionsMétéorologiques"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#VitesseVent"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    
+    <!-- Moteur Data Properties -->
+    <DataPropertyDomain>
+        <DataProperty IRI="#IdMoteur"/>
+        <Class IRI="#Moteur"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#IdMoteur"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#TypeMoteur"/>
+        <Class IRI="#Moteur"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#TypeMoteur"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#Puissance"/>
+        <Class IRI="#Moteur"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Puissance"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#Consommation"/>
+        <Class IRI="#Moteur"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Consommation"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    
+    <!-- Capitaine Data Properties -->
+    <DataPropertyDomain>
+        <DataProperty IRI="#IdCapitaine"/>
+        <Class IRI="#Capitaine"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#IdCapitaine"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#NomCapitaine"/>
+        <Class IRI="#Capitaine"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#NomCapitaine"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#PrénomCapitaine"/>
+        <Class IRI="#Capitaine"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#PrénomCapitaine"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#Salaire"/>
+        <Class IRI="#Capitaine"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Salaire"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#Âge"/>
+        <Class IRI="#Capitaine"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Âge"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#DateDébutTravail"/>
+        <Class IRI="#Capitaine"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#DateDébutTravail"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#Nationalité"/>
+        <Class IRI="#Capitaine"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Nationalité"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <!-- Cargaison Data Properties -->
+    <DataPropertyDomain>
+        <DataProperty IRI="#IdCargaison"/>
+        <Class IRI="#Cargaison"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#IdCargaison"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#Poids"/>
+        <Class IRI="#Cargaison"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Poids"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#Prix"/>
+        <Class IRI="#Cargaison"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Prix"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#TypeCargaison"/>
+        <Class IRI="#Cargaison"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#TypeCargaison"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <!-- CompagnieMaritime Data Properties -->
+    <DataPropertyDomain>
+        <DataProperty IRI="#IdCompanie"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#IdCompanie"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#NomCompanie"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#NomCompanie"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#NombreNavire"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#NombreNavire"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#ChiffresAffaires"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#ChiffresAffaires"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#AnnéeCréation"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#AnnéeCréation"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    
+    <!-- Navire Data Properties -->
+    <DataPropertyDomain>
+        <DataProperty IRI="#IdNavire"/>
+        <Class IRI="#Navire"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#IdNavire"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#AnnéeConstruction"/>
+        <Class IRI="#Navire"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#AnnéeConstruction"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#Capacité"/>
+        <Class IRI="#Navire"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Capacité"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#Longueur"/>
+        <Class IRI="#Navire"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Longueur"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#Largeur"/>
+        <Class IRI="#Navire"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Largeur"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#TypeNavire"/>
+        <Class IRI="#Navire"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#TypeNavire"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <!-- Port Data Properties -->
+    <DataPropertyDomain>
+        <DataProperty IRI="#IdPort"/>
+        <Class IRI="#Port"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#IdPort"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#NomPort"/>
+        <Class IRI="#Port"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#NomPort"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#CapacitéPort"/>
+        <Class IRI="#Port"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#CapacitéPort"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#Location"/>
+        <Class IRI="#Port"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Location"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <!-- Trajet Data Properties -->
+    <DataPropertyDomain>
+        <DataProperty IRI="#IdTrajet"/>
+        <Class IRI="#Trajet"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#IdTrajet"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#Distance"/>
+        <Class IRI="#Trajet"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Distance"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#Durée"/>
+        <Class IRI="#Trajet"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Durée"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#DateArrivée"/>
+        <Class IRI="#Trajet"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#DateArrivée"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    
+    <DataPropertyDomain>
+        <DataProperty IRI="#DateDépart"/>
+        <Class IRI="#Trajet"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#DateDépart"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    
+    <!-- Object Property Characteristics -->
+    
+    <!-- appartientÀ is Functional (a vessel belongs to exactly one company) -->
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#appartientÀ"/>
+    </FunctionalObjectProperty>
+    
+    <!-- commandéPar is Functional (a vessel has exactly one captain) -->
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#commandéPar"/>
+    </FunctionalObjectProperty>
+    
+    <!-- employéPar is Functional (a captain works for exactly one company) -->
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#employéPar"/>
+    </FunctionalObjectProperty>
+    
+    <!-- transportéPar is Functional (a cargo is transported by exactly one vessel) -->
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#transportéPar"/>
+    </FunctionalObjectProperty>
+    
+    <!-- depuisPort is Functional (a route has exactly one departure port) -->
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#depuisPort"/>
+    </FunctionalObjectProperty>
+    
+    <!-- versPort is Functional (a route has exactly one arrival port) -->
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#versPort"/>
+    </FunctionalObjectProperty>
+    
+    <!-- utiliséPar is Functional (an engine is used by exactly one vessel) -->
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#utiliséPar"/>
+    </FunctionalObjectProperty>
+    
+    <!-- effectuéPar is Functional (a route is performed by exactly one vessel) -->
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#effectuéPar"/>
+    </FunctionalObjectProperty>
+    
+    <!-- Class Disjointness -->
+    
+    <DisjointClasses>
+        <Class IRI="#Capitaine"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </DisjointClasses>
+    
+    <DisjointClasses>
+        <Class IRI="#Navire"/>
+        <Class IRI="#Port"/>
+    </DisjointClasses>
+    
+    <DisjointClasses>
+        <Class IRI="#Cargaison"/>
+        <Class IRI="#Moteur"/>
+    </DisjointClasses>
+    
+    <DisjointClasses>
+        <Class IRI="#ConditionsMétéorologiques"/>
+        <Class IRI="#Trajet"/>
+    </DisjointClasses>
+    
+    <!-- SWRL Rules -->
+    
+    <!-- Example SWRL Rules -->
+    
+    <!-- Rule 1: If a captain commands a vessel and that vessel belongs to a company, 
+         then the captain is employed by that company -->
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Capitaine"/>
+                <Variable IRI="urn:swrl:var#c"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Navire"/>
+                <Variable IRI="urn:swrl:var#n"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#CompagnieMaritime"/>
+                <Variable IRI="urn:swrl:var#cm"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#commandéPar"/>
+                <Variable IRI="urn:swrl:var#n"/>
+                <Variable IRI="urn:swrl:var#c"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#appartientÀ"/>
+                <Variable IRI="urn:swrl:var#n"/>
+                <Variable IRI="urn:swrl:var#cm"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#employéPar"/>
+                <Variable IRI="urn:swrl:var#c"/>
+                <Variable IRI="urn:swrl:var#cm"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    
+    <!-- Rule 2: If a route is performed by a vessel that transports a cargo,
+         then that cargo is on that route -->
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Trajet"/>
+                <Variable IRI="urn:swrl:var#t"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Navire"/>
+                <Variable IRI="urn:swrl:var#n"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Cargaison"/>
+                <Variable IRI="urn:swrl:var#cg"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#effectuéPar"/>
+                <Variable IRI="urn:swrl:var#t"/>
+                <Variable IRI="urn:swrl:var#n"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#transportéPar"/>
+                <Variable IRI="urn:swrl:var#cg"/>
+                <Variable IRI="urn:swrl:var#n"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <!-- Define a new property 'surTrajet' (on route) -->
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#surTrajet"/>
+                <Variable IRI="urn:swrl:var#cg"/>
+                <Variable IRI="urn:swrl:var#t"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    
+    <!-- Some example individuals -->
+    
+    <!-- Example of a shipping company -->
+<Declaration>
+    <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
+</Declaration>
+<ClassAssertion>
+    <Class IRI="#CompagnieMaritime"/>
+    <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
+</ClassAssertion>
 <DataPropertyAssertion>
-    <DataProperty IRI="#AnnéeConstruction"/>
-    <NamedIndividual IRI="#Carthage"/>
-    <Literal datatypeIRI="&xsd;integer">2009</Literal>
+    <DataProperty IRI="#IdCompanie"/>
+    <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
+    <Literal datatypeIRI="&xsd;string">COMP_001</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
-    <DataProperty IRI="#Capacité"/>
-    <NamedIndividual IRI="#Carthage"/>
-    <Literal datatypeIRI="&xsd;decimal">1500.0</Literal>
+    <DataProperty IRI="#NomCompanie"/>
+    <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
+    <Literal datatypeIRI="&xsd;string">Compagnie Tunisienne de Navigation</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
-    <DataProperty IRI="#Longueur"/>
-    <NamedIndividual IRI="#Carthage"/>
-    <Literal datatypeIRI="&xsd;decimal">210.5</Literal>
+    <DataProperty IRI="#NombreNavire"/>
+    <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
+    <Literal datatypeIRI="&xsd;integer">50</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
-    <DataProperty IRI="#Largeur"/>
+    <DataProperty IRI="#AnnéeCréation"/>
+    <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
+    <Literal datatypeIRI="&xsd;integer">1955</Literal>
+</DataPropertyAssertion>
+
+<!-- Example of a vessel -->
+<Declaration>
     <NamedIndividual IRI="#Carthage"/>
-    <Literal datatypeIRI="&xsd;decimal">30.2</Literal>
+</Declaration>
+<ClassAssertion>
+    <Class IRI="#Navire"/>
+    <NamedIndividual IRI="#Carthage"/>
+</ClassAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#IdNavire"/>
+    <NamedIndividual IRI="#Carthage"/>
+    <Literal datatypeIRI="&xsd;string">NAV_001</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#TypeNavire"/>
     <NamedIndividual IRI="#Carthage"/>
-    <Literal datatypeIRI="&xsd;string">Ferry</Literal>
+    <Literal datatypeIRI="&xsd;string">Cargo</Literal>
+</DataPropertyAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#AnnéeConstruction"/>
+    <NamedIndividual IRI="#Carthage"/>
+    <Literal datatypeIRI="&xsd;integer">2010</Literal>
+</DataPropertyAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#Longueur"/>
+    <NamedIndividual IRI="#Carthage"/>
+    <Literal datatypeIRI="&xsd;decimal">180.0</Literal>
+</DataPropertyAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#Largeur"/>
+    <NamedIndividual IRI="#Carthage"/>
+    <Literal datatypeIRI="&xsd;decimal">30.0</Literal>
+</DataPropertyAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#Capacité"/>
+    <NamedIndividual IRI="#Carthage"/>
+    <Literal datatypeIRI="&xsd;decimal">10000.0</Literal>
 </DataPropertyAssertion>
 <ObjectPropertyAssertion>
     <ObjectProperty IRI="#appartientÀ"/>
     <NamedIndividual IRI="#Carthage"/>
-    <NamedIndividual IRI="#CTN"/>
+    <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
 </ObjectPropertyAssertion>
 
-<!-- Example of a Tunisian Port -->
+<!-- Example of a captain -->
+<Declaration>
+    <NamedIndividual IRI="#AliBenHassan"/>
+</Declaration>
+<ClassAssertion>
+    <Class IRI="#Capitaine"/>
+    <NamedIndividual IRI="#AliBenHassan"/>
+</ClassAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#IdCapitaine"/>
+    <NamedIndividual IRI="#AliBenHassan"/>
+    <Literal datatypeIRI="&xsd;string">CAP_001</Literal>
+</DataPropertyAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#NomCapitaine"/>
+    <NamedIndividual IRI="#AliBenHassan"/>
+    <Literal datatypeIRI="&xsd;string">Ben Hassan</Literal>
+</DataPropertyAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#PrénomCapitaine"/>
+    <NamedIndividual IRI="#AliBenHassan"/>
+    <Literal datatypeIRI="&xsd;string">Ali</Literal>
+</DataPropertyAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#Âge"/>
+    <NamedIndividual IRI="#AliBenHassan"/>
+    <Literal datatypeIRI="&xsd;integer">50</Literal>
+</DataPropertyAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#Salaire"/>
+    <NamedIndividual IRI="#AliBenHassan"/>
+    <Literal datatypeIRI="&xsd;decimal">70000.0</Literal>
+</DataPropertyAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#Nationalité"/>
+    <NamedIndividual IRI="#AliBenHassan"/>
+    <Literal datatypeIRI="&xsd;string">Tunisienne</Literal>
+</DataPropertyAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#DateDébutTravail"/>
+    <NamedIndividual IRI="#AliBenHassan"/>
+    <Literal datatypeIRI="&xsd;date">1995-07-20</Literal>
+</DataPropertyAssertion>
+<ObjectPropertyAssertion>
+    <ObjectProperty IRI="#employéPar"/>
+    <NamedIndividual IRI="#AliBenHassan"/>
+    <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
+</ObjectPropertyAssertion>
+
+<!-- Example of ports -->
 <Declaration>
     <NamedIndividual IRI="#PortLaGoulette"/>
 </Declaration>
@@ -48,256 +928,332 @@
     <Literal datatypeIRI="&xsd;string">La Goulette</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
-    <DataProperty IRI="#CapacitéPort"/>
-    <NamedIndividual IRI="#PortLaGoulette"/>
-    <Literal datatypeIRI="&xsd;integer">25</Literal>
-</DataPropertyAssertion>
-<DataPropertyAssertion>
     <DataProperty IRI="#Location"/>
     <NamedIndividual IRI="#PortLaGoulette"/>
     <Literal datatypeIRI="&xsd;string">Tunis, Tunisie</Literal>
 </DataPropertyAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#CapacitéPort"/>
+    <NamedIndividual IRI="#PortLaGoulette"/>
+    <Literal datatypeIRI="&xsd;integer">5000000</Literal>
+</DataPropertyAssertion>
 
-<!-- Example of a French Port -->
 <Declaration>
-    <NamedIndividual IRI="#PortMarseille"/>
+    <NamedIndividual IRI="#PortSfax"/>
 </Declaration>
 <ClassAssertion>
     <Class IRI="#Port"/>
-    <NamedIndividual IRI="#PortMarseille"/>
+    <NamedIndividual IRI="#PortSfax"/>
 </ClassAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#IdPort"/>
-    <NamedIndividual IRI="#PortMarseille"/>
+    <NamedIndividual IRI="#PortSfax"/>
     <Literal datatypeIRI="&xsd;string">PORT_002</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#NomPort"/>
-    <NamedIndividual IRI="#PortMarseille"/>
-    <Literal datatypeIRI="&xsd;string">Marseille</Literal>
-</DataPropertyAssertion>
-<DataPropertyAssertion>
-    <DataProperty IRI="#CapacitéPort"/>
-    <NamedIndividual IRI="#PortMarseille"/>
-    <Literal datatypeIRI="&xsd;integer">120</Literal>
+    <NamedIndividual IRI="#PortSfax"/>
+    <Literal datatypeIRI="&xsd;string">Sfax</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#Location"/>
-    <NamedIndividual IRI="#PortMarseille"/>
-    <Literal datatypeIRI="&xsd;string">Marseille, France</Literal>
+    <NamedIndividual IRI="#PortSfax"/>
+    <Literal datatypeIRI="&xsd;string">Sfax, Tunisie</Literal>
+</DataPropertyAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#CapacitéPort"/>
+    <NamedIndividual IRI="#PortSfax"/>
+    <Literal datatypeIRI="&xsd;integer">7000000</Literal>
 </DataPropertyAssertion>
 
-<!-- Example of a Tunisian Captain -->
+<!-- Example of a cargo -->
 <Declaration>
-    <NamedIndividual IRI="#CaptaineMehdi"/>
-</Declaration>
-<ClassAssertion>
-    <Class IRI="#Capitaine"/>
-    <NamedIndividual IRI="#CaptaineMehdi"/>
-</ClassAssertion>
-<DataPropertyAssertion>
-    <DataProperty IRI="#IdCapitaine"/>
-    <NamedIndividual IRI="#CaptaineMehdi"/>
-    <Literal datatypeIRI="&xsd;string">CAP_001</Literal>
-</DataPropertyAssertion>
-<DataPropertyAssertion>
-    <DataProperty IRI="#NomCapitaine"/>
-    <NamedIndividual IRI="#CaptaineMehdi"/>
-    <Literal datatypeIRI="&xsd;string">Ben Salem</Literal>
-</DataPropertyAssertion>
-<DataPropertyAssertion>
-    <DataProperty IRI="#PrénomCapitaine"/>
-    <NamedIndividual IRI="#CaptaineMehdi"/>
-    <Literal datatypeIRI="&xsd;string">Mehdi</Literal>
-</DataPropertyAssertion>
-<DataPropertyAssertion>
-    <DataProperty IRI="#Âge"/>
-    <NamedIndividual IRI="#CaptaineMehdi"/>
-    <Literal datatypeIRI="&xsd;integer">45</Literal>
-</DataPropertyAssertion>
-<DataPropertyAssertion>
-    <DataProperty IRI="#Salaire"/>
-    <NamedIndividual IRI="#CaptaineMehdi"/>
-    <Literal datatypeIRI="&xsd;decimal">85000.0</Literal>
-</DataPropertyAssertion>
-<DataPropertyAssertion>
-    <DataProperty IRI="#DateDébutTravail"/>
-    <NamedIndividual IRI="#CaptaineMehdi"/>
-    <Literal datatypeIRI="&xsd;date">2005-06-15</Literal>
-</DataPropertyAssertion>
-<DataPropertyAssertion>
-    <DataProperty IRI="#Nationalité"/>
-    <NamedIndividual IRI="#CaptaineMehdi"/>
-    <Literal datatypeIRI="&xsd;string">Tunisienne</Literal>
-</DataPropertyAssertion>
-<ObjectPropertyAssertion>
-    <ObjectProperty IRI="#employéPar"/>
-    <NamedIndividual IRI="#CaptaineMehdi"/>
-    <NamedIndividual IRI="#CTN"/>
-</ObjectPropertyAssertion>
-<ObjectPropertyAssertion>
-    <ObjectProperty IRI="#commandéPar"/>
-    <NamedIndividual IRI="#Carthage"/>
-    <NamedIndividual IRI="#CaptaineMehdi"/>
-</ObjectPropertyAssertion>
-
-<!-- Example of a Cargo -->
-<Declaration>
-    <NamedIndividual IRI="#CargaisonOlives"/>
+    <NamedIndividual IRI="#CargaisonDattes"/>
 </Declaration>
 <ClassAssertion>
     <Class IRI="#Cargaison"/>
-    <NamedIndividual IRI="#CargaisonOlives"/>
+    <NamedIndividual IRI="#CargaisonDattes"/>
 </ClassAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#IdCargaison"/>
-    <NamedIndividual IRI="#CargaisonOlives"/>
-    <Literal datatypeIRI="&xsd;string">CARG_001</Literal>
-</DataPropertyAssertion>
-<DataPropertyAssertion>
-    <DataProperty IRI="#Poids"/>
-    <NamedIndividual IRI="#CargaisonOlives"/>
-    <Literal datatypeIRI="&xsd;decimal">250.0</Literal>
-</DataPropertyAssertion>
-<DataPropertyAssertion>
-    <DataProperty IRI="#Prix"/>
-    <NamedIndividual IRI="#CargaisonOlives"/>
-    <Literal datatypeIRI="&xsd;decimal">125000.0</Literal>
+    <NamedIndividual IRI="#CargaisonDattes"/>
+    <Literal datatypeIRI="&xsd;string">CARGO_001</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#TypeCargaison"/>
-    <NamedIndividual IRI="#CargaisonOlives"/>
-    <Literal datatypeIRI="&xsd;string">Huile d'olive</Literal>
+    <NamedIndividual IRI="#CargaisonDattes"/>
+    <Literal datatypeIRI="&xsd;string">Dattes</Literal>
+</DataPropertyAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#Poids"/>
+    <NamedIndividual IRI="#CargaisonDattes"/>
+    <Literal datatypeIRI="&xsd;decimal">3000.0</Literal>
+</DataPropertyAssertion>
+<DataPropertyAssertion>
+    <DataProperty IRI="#Prix"/>
+    <NamedIndividual IRI="#CargaisonDattes"/>
+    <Literal datatypeIRI="&xsd;decimal">150000.0</Literal>
 </DataPropertyAssertion>
 <ObjectPropertyAssertion>
     <ObjectProperty IRI="#transportéPar"/>
-    <NamedIndividual IRI="#CargaisonOlives"/>
+    <NamedIndividual IRI="#CargaisonDattes"/>
     <NamedIndividual IRI="#Carthage"/>
 </ObjectPropertyAssertion>
 
-<!-- Example of an Engine -->
+<!-- Example of an engine -->
 <Declaration>
-    <NamedIndividual IRI="#MoteurWärtsilä"/>
+    <NamedIndividual IRI="#MoteurWartsila"/>
 </Declaration>
 <ClassAssertion>
     <Class IRI="#Moteur"/>
-    <NamedIndividual IRI="#MoteurWärtsilä"/>
+    <NamedIndividual IRI="#MoteurWartsila"/>
 </ClassAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#IdMoteur"/>
-    <NamedIndividual IRI="#MoteurWärtsilä"/>
+    <NamedIndividual IRI="#MoteurWartsila"/>
     <Literal datatypeIRI="&xsd;string">MOT_001</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#TypeMoteur"/>
-    <NamedIndividual IRI="#MoteurWärtsilä"/>
-    <Literal datatypeIRI="&xsd;string">Diesel 4-temps</Literal>
+    <NamedIndividual IRI="#MoteurWartsila"/>
+    <Literal datatypeIRI="&xsd;string">Wartsila RT-flex50</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#Puissance"/>
-    <NamedIndividual IRI="#MoteurWärtsilä"/>
-    <Literal datatypeIRI="&xsd;decimal">25000.0</Literal>
+    <NamedIndividual IRI="#MoteurWartsila"/>
+    <Literal datatypeIRI="&xsd;decimal">60000.0</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#Consommation"/>
-    <NamedIndividual IRI="#MoteurWärtsilä"/>
-    <Literal datatypeIRI="&xsd;decimal">180.5</Literal>
+    <NamedIndividual IRI="#MoteurWartsila"/>
+    <Literal datatypeIRI="&xsd;decimal">200.0</Literal>
 </DataPropertyAssertion>
 <ObjectPropertyAssertion>
     <ObjectProperty IRI="#utiliséPar"/>
-    <NamedIndividual IRI="#MoteurWärtsilä"/>
+    <NamedIndividual IRI="#MoteurWartsila"/>
     <NamedIndividual IRI="#Carthage"/>
 </ObjectPropertyAssertion>
 
-<!-- Example of a Route -->
+<!-- Example of a route -->
 <Declaration>
-    <NamedIndividual IRI="#TrajetTunisMarseilleAller"/>
+    <NamedIndividual IRI="#Trajet_01"/>
 </Declaration>
 <ClassAssertion>
     <Class IRI="#Trajet"/>
-    <NamedIndividual IRI="#TrajetTunisMarseilleAller"/>
+    <NamedIndividual IRI="#Trajet_01"/>
 </ClassAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#IdTrajet"/>
-    <NamedIndividual IRI="#TrajetTunisMarseilleAller"/>
-    <Literal datatypeIRI="&xsd;string">TRJ_001</Literal>
+    <NamedIndividual IRI="#Trajet_01"/>
+    <Literal datatypeIRI="&xsd;string">TRA_001</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#Distance"/>
-    <NamedIndividual IRI="#TrajetTunisMarseilleAller"/>
-    <Literal datatypeIRI="&xsd;decimal">470.0</Literal>
+    <NamedIndividual IRI="#Trajet_01"/>
+    <Literal datatypeIRI="&xsd;decimal">350.0</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#Durée"/>
-    <NamedIndividual IRI="#TrajetTunisMarseilleAller"/>
-    <Literal datatypeIRI="&xsd;decimal">23.5</Literal>
+    <NamedIndividual IRI="#Trajet_01"/>
+    <Literal datatypeIRI="&xsd;decimal">10.0</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#DateDépart"/>
-    <NamedIndividual IRI="#TrajetTunisMarseilleAller"/>
-    <Literal datatypeIRI="&xsd;dateTime">2023-03-15T08:00:00Z</Literal>
+    <NamedIndividual IRI="#Trajet_01"/>
+    <Literal datatypeIRI="&xsd;dateTime">2023-04-01T06:00:00</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#DateArrivée"/>
-    <NamedIndividual IRI="#TrajetTunisMarseilleAller"/>
-    <Literal datatypeIRI="&xsd;dateTime">2023-03-16T07:30:00Z</Literal>
+    <NamedIndividual IRI="#Trajet_01"/>
+    <Literal datatypeIRI="&xsd;dateTime">2023-04-01T16:00:00</Literal>
 </DataPropertyAssertion>
 <ObjectPropertyAssertion>
     <ObjectProperty IRI="#depuisPort"/>
-    <NamedIndividual IRI="#TrajetTunisMarseilleAller"/>
+    <NamedIndividual IRI="#Trajet_01"/>
     <NamedIndividual IRI="#PortLaGoulette"/>
 </ObjectPropertyAssertion>
 <ObjectPropertyAssertion>
     <ObjectProperty IRI="#versPort"/>
-    <NamedIndividual IRI="#TrajetTunisMarseilleAller"/>
-    <NamedIndividual IRI="#PortMarseille"/>
+    <NamedIndividual IRI="#Trajet_01"/>
+    <NamedIndividual IRI="#PortSfax"/>
 </ObjectPropertyAssertion>
 <ObjectPropertyAssertion>
     <ObjectProperty IRI="#effectuéPar"/>
-    <NamedIndividual IRI="#TrajetTunisMarseilleAller"/>
+    <NamedIndividual IRI="#Trajet_01"/>
     <NamedIndividual IRI="#Carthage"/>
 </ObjectPropertyAssertion>
 
-<!-- Example of Weather Conditions -->
+<!-- Example of weather conditions -->
 <Declaration>
-    <NamedIndividual IRI="#ConditionsMétéoMars2023"/>
+    <NamedIndividual IRI="#ConditionsMeteoTrajet_01"/>
 </Declaration>
 <ClassAssertion>
     <Class IRI="#ConditionsMétéorologiques"/>
-    <NamedIndividual IRI="#ConditionsMétéoMars2023"/>
+    <NamedIndividual IRI="#ConditionsMeteoTrajet_01"/>
 </ClassAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#Température"/>
-    <NamedIndividual IRI="#ConditionsMétéoMars2023"/>
-    <Literal datatypeIRI="&xsd;decimal">18.5</Literal>
+    <NamedIndividual IRI="#ConditionsMeteoTrajet_01"/>
+    <Literal datatypeIRI="&xsd;decimal">25.0</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#Visibilité"/>
-    <NamedIndividual IRI="#ConditionsMétéoMars2023"/>
-    <Literal datatypeIRI="&xsd;decimal">85.0</Literal>
+    <NamedIndividual IRI="#ConditionsMeteoTrajet_01"/>
+    <Literal datatypeIRI="&xsd;decimal">10.0</Literal>
 </DataPropertyAssertion>
 <DataPropertyAssertion>
     <DataProperty IRI="#VitesseVent"/>
-    <NamedIndividual IRI="#ConditionsMétéoMars2023"/>
-    <Literal datatypeIRI="&xsd;decimal">12.3</Literal>
+    <NamedIndividual IRI="#ConditionsMeteoTrajet_01"/>
+    <Literal datatypeIRI="&xsd;decimal">10.0</Literal>
 </DataPropertyAssertion>
 <ObjectPropertyAssertion>
     <ObjectProperty IRI="#affectéPar"/>
-    <NamedIndividual IRI="#TrajetTunisMarseilleAller"/>
-    <NamedIndividual IRI="#ConditionsMétéoMars2023"/>
+    <NamedIndividual IRI="#Trajet_01"/>
+    <NamedIndividual IRI="#ConditionsMeteoTrajet_01"/>
 </ObjectPropertyAssertion>
-
-<!-- Additional Inferred Property from SWRL Rule -->
-<Declaration>
-    <ObjectProperty IRI="#surTrajet"/>
-</Declaration>
-<ObjectPropertyDomain>
-    <ObjectProperty IRI="#surTrajet"/>
-    <Class IRI="#Cargaison"/>
-</ObjectPropertyDomain>
-<ObjectPropertyRange>
-    <ObjectProperty IRI="#surTrajet"/>
-    <Class IRI="#Trajet"/>
-</ObjectPropertyRange>
-
+    
+    <!-- Additional Object Properties and SWRL Rules could be added here -->
+    
+    <!-- inverse Object Properties -->
+    <Declaration>
+        <ObjectProperty IRI="#commandeLe"/>
+    </Declaration>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#commandéPar"/>
+        <ObjectProperty IRI="#commandeLe"/>
+    </InverseObjectProperties>
+    
+    <Declaration>
+        <ObjectProperty IRI="#possède"/>
+    </Declaration>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#appartientÀ"/>
+        <ObjectProperty IRI="#possède"/>
+    </InverseObjectProperties>
+    
+    <Declaration>
+        <ObjectProperty IRI="#emploie"/>
+    </Declaration>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#employéPar"/>
+        <ObjectProperty IRI="#emploie"/>
+    </InverseObjectProperties>
+    
+    <Declaration>
+        <ObjectProperty IRI="#transporte"/>
+    </Declaration>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#transportéPar"/>
+        <ObjectProperty IRI="#transporte"/>
+    </InverseObjectProperties>
+    
+    <!-- Transitive Property -->
+    <Declaration>
+        <ObjectProperty IRI="#amarréÀ"/>
+    </Declaration>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#amarréÀ"/>
+    </TransitiveObjectProperty>
+    
+    <!-- Additional Axioms -->
+    <SubClassOf>
+        <Class IRI="#Navire"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#appartientÀ"/>
+            <Class IRI="#CompagnieMaritime"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class IRI="#Navire"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#commandéPar"/>
+            <Class IRI="#Capitaine"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class IRI="#Capitaine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#employéPar"/>
+            <Class IRI="#CompagnieMaritime"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class IRI="#Trajet"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#depuisPort"/>
+            <Class IRI="#Port"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class IRI="#Trajet"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#versPort"/>
+            <Class IRI="#Port"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class IRI="#Trajet"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#effectuéPar"/>
+            <Class IRI="#Navire"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
+    <!-- Additional SubClass Relationships -->
+    <Declaration>
+        <Class IRI="#NavireCargo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NavirePassager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PorteMarchandises"/>
+    </Declaration>
+    
+    <SubClassOf>
+        <Class IRI="#NavireCargo"/>
+        <Class IRI="#Navire"/>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class IRI="#NavirePassager"/>
+        <Class IRI="#Navire"/>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class IRI="#PorteMarchandises"/>
+        <Class IRI="#NavireCargo"/>
+    </SubClassOf>
+    
+    <!-- Restrictions for Specific Types -->
+    <SubClassOf>
+        <Class IRI="#NavireCargo"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#Capacité"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">1000.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class IRI="#PorteMarchandises"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#TypeNavire"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&xsd;string">Porte-conteneurs</Literal>
+                <Literal datatypeIRI="&xsd;string">Vraquier</Literal>
+                <Literal datatypeIRI="&xsd;string">Pétrolier</Literal>
+            </DataOneOf>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    
 </Ontology>
