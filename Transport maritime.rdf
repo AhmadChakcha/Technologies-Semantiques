@@ -1,851 +1,1100 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/transportmaritime/"
-     xml:base="http://www.semanticweb.org/transportmaritime/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/transportmaritime"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:transportmaritime="http://www.semanticweb.org/transportmaritime#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/transportmaritime">
-        <rdfs:comment>Mini-projet dans le cadre du cours sur les Technologies Sémantiques.</rdfs:comment>
-    </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#affectépar -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/transportmaritime#affectépar">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Trajet"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/transportmaritime#ConditionsMétéorologiques"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#appartientà -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/transportmaritime#appartientà">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Navire"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/transportmaritime#CompagnieMaritime"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#commandépar -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/transportmaritime#commandépar">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Navire"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/transportmaritime#Capitaine"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#depuisport -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/transportmaritime#depuisport">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Trajet"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/transportmaritime#Port"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#effectuépar -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/transportmaritime#effectuépar">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Trajet"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/transportmaritime#Navire"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#employépar -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/transportmaritime#employépar">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Capitaine"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/transportmaritime#CompagnieMaritime"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#transportépar -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/transportmaritime#transportépar">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Cargaison"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/transportmaritime#Navire"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#utilisépar -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/transportmaritime#utilisépar">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Moteur"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/transportmaritime#Navire"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#versport -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/transportmaritime#versport">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Trajet"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/transportmaritime#Port"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Age -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#Age">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Capitaine"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#AnnéeConstruction -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#AnnéeConstruction">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Navire"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#AnnéeCréation -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#AnnéeCréation">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#CompagnieMaritime"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Capacité -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#Capacité">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Navire"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#CapacitéPort -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#CapacitéPort">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Port"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#ChiffresAffaires -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#ChiffresAffaires">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#CompagnieMaritime"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Consommation -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#Consommation">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Moteur"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#DateArrivée -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#DateArrivée">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Trajet"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#DateDébutTravail -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#DateDébutTravail">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Capitaine"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#DateDépart -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#DateDépart">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Trajet"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Distance -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#Distance">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Trajet"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Durée -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#Durée">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Trajet"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#IdCapitaine -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#IdCapitaine">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Capitaine"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#IdCargaison -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#IdCargaison">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Cargaison"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#IdCompanie -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#IdCompanie">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#CompagnieMaritime"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#IdMoteur -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#IdMoteur">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Moteur"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#IdNavire -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#IdNavire">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Navire"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#IdPort -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#IdPort">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Port"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#IdTrajet -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#IdTrajet">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Trajet"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Largeur -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#Largeur">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Navire"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Location -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#Location">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Port"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Longeur -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#Longeur">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Navire"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Nationalité -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#Nationalité">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Capitaine"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#NomCapitaine -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#NomCapitaine">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Capitaine"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#NomCompanie -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#NomCompanie">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#CompagnieMaritime"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#NomPort -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#NomPort">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Port"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#NombreNavire -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#NombreNavire">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#CompagnieMaritime"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Poids -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#Poids">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Cargaison"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Prix -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#Prix">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Cargaison"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#PrénomCapitaine -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#PrénomCapitaine">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Capitaine"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Puissance -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#Puissance">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Moteur"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Salaire -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#Salaire">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Capitaine"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Température -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#Température">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#ConditionsMétéorologiques"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#TypeCargaison -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#TypeCargaison">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Cargaison"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#TypeMoteur -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#TypeMoteur">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Moteur"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#TypeNavire -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#TypeNavire">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#Navire"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Visibilité -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#Visibilité">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#ConditionsMétéorologiques"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#VitesseVent -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportmaritime#VitesseVent">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportmaritime#ConditionsMétéorologiques"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Capitaine -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/transportmaritime#Capitaine">
-        <rdfs:comment>La personne responsable de la gestion et de la navigation d&apos;un navire.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Cargaison -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/transportmaritime#Cargaison">
-        <rdfs:comment>Les marchandises transportées par les navires.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#CompagnieMaritime -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/transportmaritime#CompagnieMaritime">
-        <rdfs:comment>Entreprise qui gère et exploite les navires pour le transport.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#ConditionsMétéorologiques -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/transportmaritime#ConditionsMétéorologiques">
-        <rdfs:comment>Les conditions du météo affectés à un trajet.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Moteur -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/transportmaritime#Moteur">
-        <rdfs:comment>Moteur utilisé pour un navire.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Navire -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/transportmaritime#Navire">
-        <rdfs:comment>Bateau utilisé pour transporter des marchandises.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Port -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/transportmaritime#Port">
-        <rdfs:comment>Les infrastructures où les navires arrivent pour embarquer ou débarquer des marchandises.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Trajet -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/transportmaritime#Trajet">
-        <rdfs:comment>Parcours effectué par un navire entre deux ports</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Capitaine_1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#Capitaine_1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Capitaine"/>
-        <transportmaritime:employépar rdf:resource="http://www.semanticweb.org/transportmaritime#CompagnieMaritime_1"/>
-        <transportmaritime:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</transportmaritime:Age>
-        <transportmaritime:DateDébutTravail rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2016</transportmaritime:DateDébutTravail>
-        <transportmaritime:IdCapitaine rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</transportmaritime:IdCapitaine>
-        <transportmaritime:Nationalité>Belge</transportmaritime:Nationalité>
-        <transportmaritime:NomCapitaine>Hazard</transportmaritime:NomCapitaine>
-        <transportmaritime:PrénomCapitaine>Eden</transportmaritime:PrénomCapitaine>
-        <transportmaritime:Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18000.0</transportmaritime:Salaire>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Capitaine_2 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#Capitaine_2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Capitaine"/>
-        <transportmaritime:employépar rdf:resource="http://www.semanticweb.org/transportmaritime#CompagnieMaritime_2"/>
-        <transportmaritime:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</transportmaritime:Age>
-        <transportmaritime:DateDébutTravail rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</transportmaritime:DateDébutTravail>
-        <transportmaritime:IdCapitaine rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</transportmaritime:IdCapitaine>
-        <transportmaritime:Nationalité>Argentin</transportmaritime:Nationalité>
-        <transportmaritime:NomCapitaine>Messi</transportmaritime:NomCapitaine>
-        <transportmaritime:PrénomCapitaine>Lionel</transportmaritime:PrénomCapitaine>
-        <transportmaritime:Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#float">27000.0</transportmaritime:Salaire>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Capitaine_3 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#Capitaine_3">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Capitaine"/>
-        <transportmaritime:employépar rdf:resource="http://www.semanticweb.org/transportmaritime#CompagnieMaritime_3"/>
-        <transportmaritime:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27</transportmaritime:Age>
-        <transportmaritime:DateDébutTravail rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</transportmaritime:DateDébutTravail>
-        <transportmaritime:IdCapitaine rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</transportmaritime:IdCapitaine>
-        <transportmaritime:Nationalité>Japonais</transportmaritime:Nationalité>
-        <transportmaritime:NomCapitaine>Kubo</transportmaritime:NomCapitaine>
-        <transportmaritime:PrénomCapitaine>Takefusa</transportmaritime:PrénomCapitaine>
-        <transportmaritime:Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6800.0</transportmaritime:Salaire>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Cargaison11 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#Cargaison11">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Cargaison"/>
-        <transportmaritime:transportépar rdf:resource="http://www.semanticweb.org/transportmaritime#Navire_A"/>
-        <transportmaritime:IdCargaison rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19</transportmaritime:IdCargaison>
-        <transportmaritime:Poids rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11200</transportmaritime:Poids>
-        <transportmaritime:Prix rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3500</transportmaritime:Prix>
-        <transportmaritime:TypeCargaison>Alimentaires</transportmaritime:TypeCargaison>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Cargaison12 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#Cargaison12">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Cargaison"/>
-        <transportmaritime:transportépar rdf:resource="http://www.semanticweb.org/transportmaritime#Navire_C"/>
-        <transportmaritime:IdCargaison rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</transportmaritime:IdCargaison>
-        <transportmaritime:Poids rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7800</transportmaritime:Poids>
-        <transportmaritime:Prix rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12000</transportmaritime:Prix>
-        <transportmaritime:TypeCargaison>Liquides</transportmaritime:TypeCargaison>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#CompagnieMaritime_1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#CompagnieMaritime_1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#CompagnieMaritime"/>
-        <transportmaritime:AnnéeCréation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1905</transportmaritime:AnnéeCréation>
-        <transportmaritime:ChiffresAffaires rdf:datatype="http://www.w3.org/2001/XMLSchema#float">800000.0</transportmaritime:ChiffresAffaires>
-        <transportmaritime:IdCompanie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16</transportmaritime:IdCompanie>
-        <transportmaritime:NomCompanie>Chelsea</transportmaritime:NomCompanie>
-        <transportmaritime:NombreNavire rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</transportmaritime:NombreNavire>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#CompagnieMaritime_2 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#CompagnieMaritime_2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#CompagnieMaritime"/>
-        <transportmaritime:AnnéeCréation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1912</transportmaritime:AnnéeCréation>
-        <transportmaritime:ChiffresAffaires rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9540000.0</transportmaritime:ChiffresAffaires>
-        <transportmaritime:IdCompanie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32</transportmaritime:IdCompanie>
-        <transportmaritime:NomCompanie>Leeds</transportmaritime:NomCompanie>
-        <transportmaritime:NombreNavire rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">652</transportmaritime:NombreNavire>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#CompagnieMaritime_3 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#CompagnieMaritime_3">
-        <transportmaritime:AnnéeCréation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1968</transportmaritime:AnnéeCréation>
-        <transportmaritime:ChiffresAffaires rdf:datatype="http://www.w3.org/2001/XMLSchema#float">654000.0</transportmaritime:ChiffresAffaires>
-        <transportmaritime:IdCompanie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">41</transportmaritime:IdCompanie>
-        <transportmaritime:NomCompanie>Parma</transportmaritime:NomCompanie>
-        <transportmaritime:NombreNavire rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120</transportmaritime:NombreNavire>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#CondMétéo1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#CondMétéo1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#ConditionsMétéorologiques"/>
-        <transportmaritime:Température rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</transportmaritime:Température>
-        <transportmaritime:Visibilité rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</transportmaritime:Visibilité>
-        <transportmaritime:VitesseVent>60 KM/H</transportmaritime:VitesseVent>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#CondMétéo2 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#CondMétéo2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#ConditionsMétéorologiques"/>
-        <transportmaritime:Température rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-8</transportmaritime:Température>
-        <transportmaritime:Visibilité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</transportmaritime:Visibilité>
-        <transportmaritime:VitesseVent>90 KM/H</transportmaritime:VitesseVent>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Moteur11 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#Moteur11">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Moteur"/>
-        <transportmaritime:utilisépar rdf:resource="http://www.semanticweb.org/transportmaritime#Navire_A"/>
-        <transportmaritime:Consommation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</transportmaritime:Consommation>
-        <transportmaritime:IdMoteur rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13</transportmaritime:IdMoteur>
-        <transportmaritime:Puissance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">115</transportmaritime:Puissance>
-        <transportmaritime:TypeMoteur>Electrique</transportmaritime:TypeMoteur>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Moteur12 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#Moteur12">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Moteur"/>
-        <transportmaritime:utilisépar rdf:resource="http://www.semanticweb.org/transportmaritime#Navire_C"/>
-        <transportmaritime:Consommation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</transportmaritime:Consommation>
-        <transportmaritime:IdMoteur rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</transportmaritime:IdMoteur>
-        <transportmaritime:Puissance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</transportmaritime:Puissance>
-        <transportmaritime:TypeMoteur>Nucléaire</transportmaritime:TypeMoteur>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Navire_A -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#Navire_A">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Navire"/>
-        <transportmaritime:appartientà rdf:resource="http://www.semanticweb.org/transportmaritime#CompagnieMaritime_1"/>
-        <transportmaritime:commandépar rdf:resource="http://www.semanticweb.org/transportmaritime#Capitaine_1"/>
-        <transportmaritime:AnnéeConstruction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1989</transportmaritime:AnnéeConstruction>
-        <transportmaritime:Capacité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</transportmaritime:Capacité>
-        <transportmaritime:IdNavire rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22</transportmaritime:IdNavire>
-        <transportmaritime:Largeur rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</transportmaritime:Largeur>
-        <transportmaritime:Longeur rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">225</transportmaritime:Longeur>
-        <transportmaritime:TypeNavire>Porte-conteneurs</transportmaritime:TypeNavire>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Navire_B -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#Navire_B">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Navire"/>
-        <transportmaritime:appartientà rdf:resource="http://www.semanticweb.org/transportmaritime#CompagnieMaritime_2"/>
-        <transportmaritime:commandépar rdf:resource="http://www.semanticweb.org/transportmaritime#Capitaine_2"/>
-        <transportmaritime:AnnéeConstruction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</transportmaritime:AnnéeConstruction>
-        <transportmaritime:Capacité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8000</transportmaritime:Capacité>
-        <transportmaritime:IdNavire rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11</transportmaritime:IdNavire>
-        <transportmaritime:Largeur rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</transportmaritime:Largeur>
-        <transportmaritime:Longeur rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">312</transportmaritime:Longeur>
-        <transportmaritime:TypeNavire>Roulier</transportmaritime:TypeNavire>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Navire_C -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#Navire_C">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Navire"/>
-        <transportmaritime:appartientà rdf:resource="http://www.semanticweb.org/transportmaritime#CompagnieMaritime_1"/>
-        <transportmaritime:commandépar rdf:resource="http://www.semanticweb.org/transportmaritime#Capitaine_3"/>
-        <transportmaritime:AnnéeConstruction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</transportmaritime:AnnéeConstruction>
-        <transportmaritime:Capacité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18000</transportmaritime:Capacité>
-        <transportmaritime:IdNavire rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24</transportmaritime:IdNavire>
-        <transportmaritime:Largeur rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</transportmaritime:Largeur>
-        <transportmaritime:Longeur rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">340</transportmaritime:Longeur>
-        <transportmaritime:TypeNavire>Spéciale</transportmaritime:TypeNavire>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#PortA -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#PortA">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Port"/>
-        <transportmaritime:CapacitéPort rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</transportmaritime:CapacitéPort>
-        <transportmaritime:IdPort rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17</transportmaritime:IdPort>
-        <transportmaritime:Location>Tunisie</transportmaritime:Location>
-        <transportmaritime:NomPort>Port of Sfax</transportmaritime:NomPort>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#PortB -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#PortB">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Port"/>
-        <transportmaritime:CapacitéPort rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</transportmaritime:CapacitéPort>
-        <transportmaritime:IdPort rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18</transportmaritime:IdPort>
-        <transportmaritime:Location>France</transportmaritime:Location>
-        <transportmaritime:NomPort>Port of Marseille</transportmaritime:NomPort>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#PortC -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#PortC">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Port"/>
-        <transportmaritime:CapacitéPort rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12000</transportmaritime:CapacitéPort>
-        <transportmaritime:IdPort rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18</transportmaritime:IdPort>
-        <transportmaritime:Location>Italie</transportmaritime:Location>
-        <transportmaritime:NomPort>Port of Milano</transportmaritime:NomPort>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#PortD -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#PortD">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Port"/>
-        <transportmaritime:Capacité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1400</transportmaritime:Capacité>
-        <transportmaritime:IdPort rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</transportmaritime:IdPort>
-        <transportmaritime:Location>Egypte</transportmaritime:Location>
-        <transportmaritime:Location>Port of AlIskandria</transportmaritime:Location>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Tarjet_01 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#Tarjet_01">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Trajet"/>
-        <transportmaritime:affectépar rdf:resource="http://www.semanticweb.org/transportmaritime#CondMétéo1"/>
-        <transportmaritime:depuisport rdf:resource="http://www.semanticweb.org/transportmaritime#PortA"/>
-        <transportmaritime:effectuépar rdf:resource="http://www.semanticweb.org/transportmaritime#Navire_A"/>
-        <transportmaritime:versport rdf:resource="http://www.semanticweb.org/transportmaritime#PortB"/>
-        <transportmaritime:DateArrivée rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-05T17:45:00</transportmaritime:DateArrivée>
-        <transportmaritime:DateDépart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-01T08:30:00</transportmaritime:DateDépart>
-        <transportmaritime:Distance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</transportmaritime:Distance>
-        <transportmaritime:Durée rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</transportmaritime:Durée>
-        <transportmaritime:IdTrajet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</transportmaritime:IdTrajet>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/transportmaritime#Tarjet_02 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/transportmaritime#Tarjet_02">
-        <rdf:type rdf:resource="http://www.semanticweb.org/transportmaritime#Trajet"/>
-        <transportmaritime:Durée rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">212</transportmaritime:Durée>
-        <transportmaritime:IdTrajet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">98</transportmaritime:IdTrajet>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
-        <rdfs:comment>Les classes utilisées dans l&apos;ontologie du transport maritime.</rdfs:comment>
-    </rdf:Description>
-</rdf:RDF>
+     ontologyIRI="http://www.semanticweb.org/transportmaritime">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="tm" IRI="http://www.semanticweb.org/transportmaritime#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Capitaine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cargaison"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CompagnieMaritime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConditionsMétéorologiques"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Moteur"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Navire"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NavireCargo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NavirePassager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Port"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PorteMarchandises"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Trajet"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#affectéPar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#amarréÀ"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#appartientÀ"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#commandeLe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#commandéPar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#depuisPort"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#effectuéPar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#emploie"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#employéPar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#possède"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#transporte"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#transportéPar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#utiliséPar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#versPort"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#AnnéeConstruction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#AnnéeCréation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Capacité"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CapacitéPort"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ChiffresAffaires"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Consommation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DateArrivée"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DateDébutTravail"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DateDépart"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Distance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Durée"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#IdCapitaine"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#IdCargaison"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#IdCompanie"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#IdMoteur"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#IdNavire"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#IdPort"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#IdTrajet"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Largeur"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Longueur"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Nationalité"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NomCapitaine"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NomCompanie"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NomPort"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NombreNavire"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Poids"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Prix"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PrénomCapitaine"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Puissance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Salaire"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Température"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#TypeCargaison"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#TypeMoteur"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#TypeNavire"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Visibilité"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#VitesseVent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Âge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AliBenHassan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CargaisonDattes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carthage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConditionsMeteoTrajet_01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MoteurWartsila"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PortLaGoulette"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PortSfax"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Trajet_01"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#surTrajet"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Capitaine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#employéPar"/>
+            <Class IRI="#CompagnieMaritime"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Navire"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#appartientÀ"/>
+            <Class IRI="#CompagnieMaritime"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Navire"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#commandéPar"/>
+            <Class IRI="#Capitaine"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NavireCargo"/>
+        <Class IRI="#Navire"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NavireCargo"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#Capacité"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1000.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NavirePassager"/>
+        <Class IRI="#Navire"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PorteMarchandises"/>
+        <Class IRI="#Navire"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PorteMarchandises"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#TypeNavire"/>
+            <DataOneOf>
+                <Literal>Porte-conteneurs</Literal>
+                <Literal>Pétrolier</Literal>
+                <Literal>Vraquier</Literal>
+            </DataOneOf>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trajet"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#depuisPort"/>
+            <Class IRI="#Port"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trajet"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#effectuéPar"/>
+            <Class IRI="#Navire"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trajet"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#versPort"/>
+            <Class IRI="#Port"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Capitaine"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cargaison"/>
+        <Class IRI="#Moteur"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ConditionsMétéorologiques"/>
+        <Class IRI="#Trajet"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Navire"/>
+        <Class IRI="#Port"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Capitaine"/>
+        <NamedIndividual IRI="#AliBenHassan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cargaison"/>
+        <NamedIndividual IRI="#CargaisonDattes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Navire"/>
+        <NamedIndividual IRI="#Carthage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CompagnieMaritime"/>
+        <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConditionsMétéorologiques"/>
+        <NamedIndividual IRI="#ConditionsMeteoTrajet_01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Moteur"/>
+        <NamedIndividual IRI="#MoteurWartsila"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Port"/>
+        <NamedIndividual IRI="#PortLaGoulette"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Port"/>
+        <NamedIndividual IRI="#PortSfax"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Trajet"/>
+        <NamedIndividual IRI="#Trajet_01"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#employéPar"/>
+        <NamedIndividual IRI="#AliBenHassan"/>
+        <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#transportéPar"/>
+        <NamedIndividual IRI="#CargaisonDattes"/>
+        <NamedIndividual IRI="#Carthage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#appartientÀ"/>
+        <NamedIndividual IRI="#Carthage"/>
+        <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#utiliséPar"/>
+        <NamedIndividual IRI="#MoteurWartsila"/>
+        <NamedIndividual IRI="#Carthage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#affectéPar"/>
+        <NamedIndividual IRI="#Trajet_01"/>
+        <NamedIndividual IRI="#ConditionsMeteoTrajet_01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#depuisPort"/>
+        <NamedIndividual IRI="#Trajet_01"/>
+        <NamedIndividual IRI="#PortLaGoulette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#effectuéPar"/>
+        <NamedIndividual IRI="#Trajet_01"/>
+        <NamedIndividual IRI="#Carthage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#versPort"/>
+        <NamedIndividual IRI="#Trajet_01"/>
+        <NamedIndividual IRI="#PortSfax"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DateDébutTravail"/>
+        <NamedIndividual IRI="#AliBenHassan"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1995-07-20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#IdCapitaine"/>
+        <NamedIndividual IRI="#AliBenHassan"/>
+        <Literal>CAP_001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Nationalité"/>
+        <NamedIndividual IRI="#AliBenHassan"/>
+        <Literal>Tunisienne</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NomCapitaine"/>
+        <NamedIndividual IRI="#AliBenHassan"/>
+        <Literal>Ben Hassan</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#PrénomCapitaine"/>
+        <NamedIndividual IRI="#AliBenHassan"/>
+        <Literal>Ali</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Salaire"/>
+        <NamedIndividual IRI="#AliBenHassan"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">70000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Âge"/>
+        <NamedIndividual IRI="#AliBenHassan"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#IdCargaison"/>
+        <NamedIndividual IRI="#CargaisonDattes"/>
+        <Literal>CARGO_001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Poids"/>
+        <NamedIndividual IRI="#CargaisonDattes"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">3000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Prix"/>
+        <NamedIndividual IRI="#CargaisonDattes"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">150000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TypeCargaison"/>
+        <NamedIndividual IRI="#CargaisonDattes"/>
+        <Literal>Dattes</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AnnéeConstruction"/>
+        <NamedIndividual IRI="#Carthage"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2010</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Capacité"/>
+        <NamedIndividual IRI="#Carthage"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#IdNavire"/>
+        <NamedIndividual IRI="#Carthage"/>
+        <Literal>NAV_001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Largeur"/>
+        <NamedIndividual IRI="#Carthage"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">30.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Longueur"/>
+        <NamedIndividual IRI="#Carthage"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">180.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TypeNavire"/>
+        <NamedIndividual IRI="#Carthage"/>
+        <Literal>Cargo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AnnéeCréation"/>
+        <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1955</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#IdCompanie"/>
+        <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
+        <Literal>COMP_001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NomCompanie"/>
+        <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
+        <Literal>Compagnie Tunisienne de Navigation</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NombreNavire"/>
+        <NamedIndividual IRI="#CompagnieTunisienneDeNavigation"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Température"/>
+        <NamedIndividual IRI="#ConditionsMeteoTrajet_01"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">25.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Visibilité"/>
+        <NamedIndividual IRI="#ConditionsMeteoTrajet_01"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#VitesseVent"/>
+        <NamedIndividual IRI="#ConditionsMeteoTrajet_01"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Consommation"/>
+        <NamedIndividual IRI="#MoteurWartsila"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">200.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#IdMoteur"/>
+        <NamedIndividual IRI="#MoteurWartsila"/>
+        <Literal>MOT_001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Puissance"/>
+        <NamedIndividual IRI="#MoteurWartsila"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">60000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TypeMoteur"/>
+        <NamedIndividual IRI="#MoteurWartsila"/>
+        <Literal>Wartsila RT-flex50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CapacitéPort"/>
+        <NamedIndividual IRI="#PortLaGoulette"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5000000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#IdPort"/>
+        <NamedIndividual IRI="#PortLaGoulette"/>
+        <Literal>PORT_001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Location"/>
+        <NamedIndividual IRI="#PortLaGoulette"/>
+        <Literal>Tunis, Tunisie</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NomPort"/>
+        <NamedIndividual IRI="#PortLaGoulette"/>
+        <Literal>La Goulette</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CapacitéPort"/>
+        <NamedIndividual IRI="#PortSfax"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7000000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#IdPort"/>
+        <NamedIndividual IRI="#PortSfax"/>
+        <Literal>PORT_002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Location"/>
+        <NamedIndividual IRI="#PortSfax"/>
+        <Literal>Sfax, Tunisie</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NomPort"/>
+        <NamedIndividual IRI="#PortSfax"/>
+        <Literal>Sfax</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DateArrivée"/>
+        <NamedIndividual IRI="#Trajet_01"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2023-04-01T16:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DateDépart"/>
+        <NamedIndividual IRI="#Trajet_01"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2023-04-01T06:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Distance"/>
+        <NamedIndividual IRI="#Trajet_01"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">350.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Durée"/>
+        <NamedIndividual IRI="#Trajet_01"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#IdTrajet"/>
+        <NamedIndividual IRI="#Trajet_01"/>
+        <Literal>TRA_001</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#appartientÀ"/>
+        <ObjectProperty IRI="#possède"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#commandeLe"/>
+        <ObjectProperty IRI="#commandéPar"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#emploie"/>
+        <ObjectProperty IRI="#employéPar"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#transporte"/>
+        <ObjectProperty IRI="#transportéPar"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#appartientÀ"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#commandéPar"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#depuisPort"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#effectuéPar"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#employéPar"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#transportéPar"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#utiliséPar"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#versPort"/>
+    </FunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#amarréÀ"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#affectéPar"/>
+        <Class IRI="#Trajet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#appartientÀ"/>
+        <Class IRI="#Navire"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#commandéPar"/>
+        <Class IRI="#Navire"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#depuisPort"/>
+        <Class IRI="#Trajet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#effectuéPar"/>
+        <Class IRI="#Trajet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#employéPar"/>
+        <Class IRI="#Capitaine"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#transportéPar"/>
+        <Class IRI="#Cargaison"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#utiliséPar"/>
+        <Class IRI="#Moteur"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#versPort"/>
+        <Class IRI="#Trajet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#affectéPar"/>
+        <Class IRI="#ConditionsMétéorologiques"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#appartientÀ"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#commandéPar"/>
+        <Class IRI="#Capitaine"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#depuisPort"/>
+        <Class IRI="#Port"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#effectuéPar"/>
+        <Class IRI="#Navire"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#employéPar"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#transportéPar"/>
+        <Class IRI="#Navire"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#utiliséPar"/>
+        <Class IRI="#Navire"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#versPort"/>
+        <Class IRI="#Port"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#AnnéeConstruction"/>
+        <Class IRI="#Navire"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#AnnéeCréation"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Capacité"/>
+        <Class IRI="#Navire"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CapacitéPort"/>
+        <Class IRI="#Port"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ChiffresAffaires"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Consommation"/>
+        <Class IRI="#Moteur"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DateArrivée"/>
+        <Class IRI="#Trajet"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DateDébutTravail"/>
+        <Class IRI="#Capitaine"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DateDépart"/>
+        <Class IRI="#Trajet"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Distance"/>
+        <Class IRI="#Trajet"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Durée"/>
+        <Class IRI="#Trajet"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#IdCapitaine"/>
+        <Class IRI="#Capitaine"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#IdCargaison"/>
+        <Class IRI="#Cargaison"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#IdCompanie"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#IdMoteur"/>
+        <Class IRI="#Moteur"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#IdNavire"/>
+        <Class IRI="#Navire"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#IdPort"/>
+        <Class IRI="#Port"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#IdTrajet"/>
+        <Class IRI="#Trajet"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Largeur"/>
+        <Class IRI="#Navire"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Location"/>
+        <Class IRI="#Port"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Longueur"/>
+        <Class IRI="#Navire"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Nationalité"/>
+        <Class IRI="#Capitaine"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#NomCapitaine"/>
+        <Class IRI="#Capitaine"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#NomCompanie"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#NomPort"/>
+        <Class IRI="#Port"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#NombreNavire"/>
+        <Class IRI="#CompagnieMaritime"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Poids"/>
+        <Class IRI="#Cargaison"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Prix"/>
+        <Class IRI="#Cargaison"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#PrénomCapitaine"/>
+        <Class IRI="#Capitaine"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Puissance"/>
+        <Class IRI="#Moteur"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Salaire"/>
+        <Class IRI="#Capitaine"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Température"/>
+        <Class IRI="#ConditionsMétéorologiques"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#TypeCargaison"/>
+        <Class IRI="#Cargaison"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#TypeMoteur"/>
+        <Class IRI="#Moteur"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#TypeNavire"/>
+        <Class IRI="#Navire"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Visibilité"/>
+        <Class IRI="#ConditionsMétéorologiques"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#VitesseVent"/>
+        <Class IRI="#ConditionsMétéorologiques"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Âge"/>
+        <Class IRI="#Capitaine"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#AnnéeConstruction"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#AnnéeCréation"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Capacité"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CapacitéPort"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ChiffresAffaires"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Consommation"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#DateArrivée"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#DateDébutTravail"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#DateDépart"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Distance"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Durée"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#IdCapitaine"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#IdCargaison"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#IdCompanie"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#IdMoteur"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#IdNavire"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#IdPort"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#IdTrajet"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Largeur"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Location"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Longueur"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Nationalité"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#NomCapitaine"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#NomCompanie"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#NomPort"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#NombreNavire"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Poids"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Prix"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#PrénomCapitaine"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Puissance"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Salaire"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Température"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#TypeCargaison"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#TypeMoteur"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#TypeNavire"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Visibilité"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#VitesseVent"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Âge"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Capitaine"/>
+                <Variable IRI="urn:swrl:var#c"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Navire"/>
+                <Variable IRI="urn:swrl:var#n"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#CompagnieMaritime"/>
+                <Variable IRI="urn:swrl:var#cm"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#commandéPar"/>
+                <Variable IRI="urn:swrl:var#n"/>
+                <Variable IRI="urn:swrl:var#c"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#appartientÀ"/>
+                <Variable IRI="urn:swrl:var#n"/>
+                <Variable IRI="urn:swrl:var#cm"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#employéPar"/>
+                <Variable IRI="urn:swrl:var#c"/>
+                <Variable IRI="urn:swrl:var#cm"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Trajet"/>
+                <Variable IRI="urn:swrl:var#t"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Navire"/>
+                <Variable IRI="urn:swrl:var#n"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Cargaison"/>
+                <Variable IRI="urn:swrl:var#cg"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#effectuéPar"/>
+                <Variable IRI="urn:swrl:var#t"/>
+                <Variable IRI="urn:swrl:var#n"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#transportéPar"/>
+                <Variable IRI="urn:swrl:var#cg"/>
+                <Variable IRI="urn:swrl:var#n"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#surTrajet"/>
+                <Variable IRI="urn:swrl:var#cg"/>
+                <Variable IRI="urn:swrl:var#t"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
 
 
 
